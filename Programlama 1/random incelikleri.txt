@@ -1,0 +1,31 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    Random random = new Random();
+    int[] dizi = new int[3];
+    
+    for(int i=0; i<3; i++){
+      //dizi[i] = random.nextInt(3); //0,1,2 arasından rastgele sayı seçer
+      //dizi[i] = random.nextInt(3)+1; //1,2,3 
+      //dizi[i] = random.nextInt(8-2)+1; //1,2,3,4,5,6
+      //dizi[i] = random.nextInt(8-2)+2; //2,3,4,5,6,7
+      dizi[i] = random.nextInt(9-3)+3; //3,4,5,6,7,8
+      System.out.println(dizi[i]);
+    }
+    
+  }
+  
+ 
+}

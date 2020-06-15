@@ -1,0 +1,30 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int sayi = 1453;
+    
+    int rakam;
+    int toplam = 0;
+    
+    while(sayi>0){
+      rakam = sayi%10;
+      sayi = sayi/10;
+      toplam += rakam;
+    }
+    
+    System.out.println(toplam);
+    
+  }
+}

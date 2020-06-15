@@ -1,0 +1,30 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+ 
+  public static void main(String[] args)
+  {
+     System.out.println(HexToDecimal("1ABC"));
+  }
+  
+  public static int HexToDecimal(String hex){
+      int sonuc = 0;
+      int us = 0;
+      String hexler = "0123456789ABCDEF";
+      
+      for(int i=hex.length()-1; i>=0; i--){
+          sonuc += hexler.indexOf(hex.charAt(i))*Math.pow(16,us);
+          us++;
+      }
+      
+      return sonuc;
+  }
+}

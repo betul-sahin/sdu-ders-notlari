@@ -1,0 +1,31 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int sayi = 1453;
+    int tersi = 0;
+    int temp = sayi;
+    
+    while(sayi !=0 ){
+      
+      tersi = sayi%10 + tersi*10;
+      sayi = sayi/10;
+    }
+    
+    System.out.println(temp+" sayisinin tersi: "+tersi);
+    
+  }
+  
+  
+}

@@ -1,0 +1,56 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+   //Scanner input = new Scanner(System.in);
+   int sayi = 10;//input.nextInt();
+   int[][] matris = MatrisDondur(sayi);
+    
+   System.out.println("test");
+    
+   Yazdir(matris);
+    for(int i=0; i<=matris.length; i++){
+      for(int j=0; j<=matris[i].length; j++){
+        System.out.println(matris[i][j] + " ");
+      }
+      
+      System.out.println();
+    }
+    
+  }
+  
+  public static int[][] MatrisDondur(int n){
+    int[][] matris = new int[n][n];
+    
+    for(int i=0; i<=matris.length; i++){
+      for(int j=0; j<=matris[i].length; j++){
+        matris[i][j] = (int)(Math.random()*9); //0-8 arası sayı üretir
+      }
+    }
+    
+    return matris;
+  }
+  
+  public static void Yazdir(int[][] matrisparam){
+    
+    for(int i=0; i<=matrisparam.length; i++){
+      for(int j=0; j<=matrisparam[i].length; j++){
+        System.out.println(matrisparam[i][j] + " ");
+      }
+      
+      System.out.println();
+    }
+  }
+  
+}

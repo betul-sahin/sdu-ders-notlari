@@ -1,0 +1,25 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// Ne zaman şimdikinin iki katı olur?
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    double harc = 10000;//10 bin dolar
+    int yil = 0;
+    while(harc<20000){
+        harc *= 1.07;
+        yil++;
+    }
+    
+    System.out.println(yil+" yıl sonra iki katı olur. Harç: "+harc);
+  }
+  
+}

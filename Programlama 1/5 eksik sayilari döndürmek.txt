@@ -1,0 +1,34 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int[] sayilar = {12,34,56,78,90};
+    int[] yeniSayilar = Eksilt(sayilar);
+    
+    for(int i=0; i<yeniSayilar.length; i++){
+      System.out.print(yeniSayilar[i]+" ");
+    }
+    
+    
+  }
+  
+  public static int[] Eksilt(int[] dizi){
+    for(int i=0; i<dizi.length; i++)
+      dizi[i] = dizi[i]-5;
+    
+    return dizi;
+  }
+  
+  
+}

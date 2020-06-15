@@ -1,0 +1,2 @@
+FOR ile sonsuz döngü açmak için for(;;) şeklinde kullanılır.
+WHILE ile ise while(true) yazılır..

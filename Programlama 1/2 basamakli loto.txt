@@ -1,0 +1,40 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// ÖRNEK: iki basakmalı bir loto programı yazılacak ve kullanıcı bu sayıyı tahmin etmeye çalışacak..
+// eğer sayıyı tam bilirse $10.000
+// rakamlarını tutturursa $3.000
+// bir rakamını tutturursa $1.000
+// ödül verilecek.
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+      Random random = new Random();
+      Scanner scan = new Scanner(System.in);
+      
+      int sayi = random.nextInt(90) + 10;
+      int sayi1 = sayi/10;
+      int sayi2 = sayi%10;
+      
+      System.out.println("Tahmin giriniz: ");
+      int tahmin = scan.nextInt();
+      int tahmin1 = tahmin/10;
+      int tahmin2 = tahmin%10;
+      
+      if(tahmin == sayi) 
+        System.out.println("Sayı: "+sayi+"Tebrikler kazandınız!");
+      else if(tahmin1==sayi2 && tahmin2==sayi1) 
+        System.out.println("Sayı: "+sayi+"Tebrikler 3000$ kazandınız!");
+      else if(tahmin1==sayi1 || tahmin1==sayi2 || tahmin2==sayi1 || tahmin2==sayi2)
+        System.out.println("Sayı: "+sayi+" Tebrikler 1000$ kazandınız!");
+      else
+        System.out.println("Sayı: "+sayi+" Hiçbirşey kazanamadınız :(");
+        
+  }
+  
+}

@@ -1,0 +1,32 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    StringBuilder sb = new StringBuilder();
+    System.out.println("Kapasitesi: " + sb.capacity());
+    
+    sb.append("12345");
+    System.out.println("Kapasitesi: " + sb.capacity());
+    
+    sb.append("123456789123456789");
+    System.out.println("Kapasitesi: " + sb.capacity());
+    
+    sb.append("1234567891234567");
+    System.out.println("Kapasitesi: " + sb.capacity());
+    
+  }
+  
+ 
+  
+}

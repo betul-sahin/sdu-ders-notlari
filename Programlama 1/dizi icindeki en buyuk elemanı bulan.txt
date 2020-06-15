@@ -1,0 +1,30 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+ 
+  public static void main(String[] args)
+  {
+     int[] dizi = new int[]{1,45,67,23,34,12,89,26,25};
+     
+     int enBuyuk = 0;
+     for(int i=0; i<dizi.length; i++){
+         if(enBuyuk<dizi[i])
+         enBuyuk = dizi[i];
+     }
+     
+     System.out.print("Dizi: ");
+     for(int i=0; i<dizi.length; i++)
+     System.out.print(dizi[i]+" ");
+     System.out.println();
+     System.out.println("En büyük eleman: "+enBuyuk);
+  }
+  
+}

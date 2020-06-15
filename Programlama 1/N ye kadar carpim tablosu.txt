@@ -1,0 +1,26 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Carpim tablosu hangi sayıya kadar yazılsın ? ");
+    int N = scan.nextInt();
+    
+    for(int i=1; i<=N; i++){
+        for(int j=0; j<=10; j++){
+            System.out.println(i+" x "+j+" = "+(i*j));
+        }
+        System.out.println();
+    }
+  }
+  
+}

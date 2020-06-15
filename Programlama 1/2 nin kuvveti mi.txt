@@ -1,0 +1,31 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int sayi = 8; //kullanıcıdan alınabilir.
+    boolean kuvvetiMi = true;
+    
+    while(sayi>1){
+      if(sayi%2!=0){
+        kuvvetiMi = false;
+        break;
+      }
+      else sayi = sayi/2;
+    }
+    
+    System.out.println(kuvvetiMi==true?"2'nin kuvvetidir.":"2'nin kuvveti değildir.");
+    
+  }
+  
+}

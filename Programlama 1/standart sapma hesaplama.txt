@@ -1,0 +1,51 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 10 elemanlı dizinin standart sapması hesaplanıyor
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    Random random = new Random();
+    int[] dizi = new int[10];
+    for(int i=0; i<10; i++){
+      dizi[i] = random.nextInt(100);//0-99
+    }
+    
+    //standart sapma formulüne bakınız.
+    //Adım 1: Ortalamayı bulun.
+	//Adım 2: Her veri noktasının ortalamaya uzaklığının karesini bulun.
+	//Adım 3: 2. Adımdaki değerleri toplayın.
+	//Adım 4: Veri noktası sayısına bölün.
+	//Adım 5: Karekök alın.
+    
+    float toplam=0;
+    for(int i=0; i<dizi.length; i++){
+      toplam += dizi[i];
+    }
+    
+    float ortalama = toplam/dizi.length;//adım1
+    
+    toplam = 0; //burada adım 2 ve adım3
+    for(int i=0; i<dizi.length; i++){
+      toplam += Math.pow((dizi[i]-ortalama),2);
+    }
+    toplam = toplam/dizi.length;//adım 4
+    
+    float sonuc = (float)Math.sqrt(toplam);//adım 5
+    
+    System.out.println("Dizi:");
+    for(int i=0; i<dizi.length; i++)
+    System.out.print(dizi[i]+" ");
+    System.out.println();
+    System.out.println("Standart sapması: "+ sonuc);
+    
+  }
+  
+}

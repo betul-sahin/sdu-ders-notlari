@@ -1,0 +1,35 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    String kelime = "kabak";
+    int bastan = 0;
+    int sondan = kelime.length()-1;
+    boolean sonuc = false;
+    while(bastan<sondan){
+      
+      if(kelime.charAt(bastan)!=kelime.charAt(sondan))
+        sonuc = false;
+      else
+        sonuc = true;
+      
+        bastan++;
+        sondan--;
+      
+    }
+  
+    System.out.println(sonuc);
+  }
+  
+}

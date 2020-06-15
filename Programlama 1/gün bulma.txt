@@ -1,0 +1,44 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int bugun = 5; //0-1-2-3-4-5-6  5:Cuma
+    int kacGunSonra = 3; //3 gün sonra hangi gün olur.
+    
+    String bugununAdi = HangiGun(bugun);
+    
+    int gelecekGun = (bugun+kacGunSonra)%7;
+    String gelecekGununAdi = HangiGun(gelecekGun);
+    
+    System.out.println("Bugün günlerden "+bugununAdi+", "+kacGunSonra+" gün sonra ise "+gelecekGununAdi+".");
+    
+  }
+  
+  public static String HangiGun(int i){
+    
+    String gunAdi="";
+    switch(i){
+      case 0: gunAdi="Pazar"; break;
+      case 1: gunAdi="Pazartesi"; break;
+      case 2: gunAdi="Salı"; break;
+      case 3: gunAdi="Çarşamba"; break;
+      case 4: gunAdi="Perşembe"; break;
+      case 5: gunAdi="Cuma"; break;
+      case 6: gunAdi="Cumartesi"; break;
+    }
+    
+    return gunAdi;
+  }
+  
+}

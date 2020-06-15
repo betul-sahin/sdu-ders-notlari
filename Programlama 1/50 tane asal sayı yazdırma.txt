@@ -1,0 +1,39 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// İlk 50 asal sayıyı her satırda 10 adet olacak şekilde yazan program.
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int sayi=2;
+    int asalSay=0;
+    int toplam;
+    
+    while(true){
+        toplam = 0;
+        for(int i=1; i<=sayi; i++){
+            if(sayi%i==0){//1 ve kendisine bölünüyorsa asaldır
+                toplam++;
+            }
+        }
+        
+        if(toplam==2){
+            System.out.print(sayi+" ");
+            asalSay++;
+            if(asalSay%10 == 0)
+                System.out.println();
+            if(asalSay==50) break;
+        }
+       
+        sayi++;//bir sonraki sayıya geçiliyor
+    
+    }
+  }
+}

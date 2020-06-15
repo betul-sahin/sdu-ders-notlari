@@ -1,0 +1,33 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int vizeNotu, finalNotu;
+    double ortalama;
+    
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Vize notunu giriniz: ");
+    vizeNotu = scan.nextInt();
+    
+    System.out.println("Final notunu giriniz: ");
+    finalNotu = scan.nextInt();
+    
+    ortalama = vizeNotu*0.4 + finalNotu*0.6;
+    System.out.println("ortalamanız: "+ortalama);
+    
+    if(ortalama >= 80) System.out.println("Harf notunuz: AA");
+    else if(ortalama <= 79 && ortalama >= 50) System.out.println("Harf notunuz: BB");
+    else if(ortalama < 50) System.out.println("Harf notunuz: FF");
+    
+  }
+  
+}

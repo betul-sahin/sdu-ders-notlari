@@ -1,0 +1,28 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    String katar = "nbkjhkklssdrrrfetyu";
+    int[] alfabe = new int[26];
+    
+    for(int i=0; i<katar.length(); i++)
+      alfabe[katar.charAt(i)-'a']++;
+    
+    for(int i=0; i<alfabe.length; i++)
+      if(alfabe[i]!=0)
+      System.out.println((char)('a'+i) + " goruldu " + alfabe[i] + ((alfabe[i]==1)?" defa":" kere"));
+      
+  }
+  
+}

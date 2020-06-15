@@ -1,0 +1,27 @@
+int sayi1=10;
+int sayi2=25;
+int sayac=0;
+
+if(sayi1<sayi2)
+{
+  sayac = sayi1;
+}
+else
+{
+  sayac = sayi2;
+}
+
+int sonuc = 0;
+while(true)
+{
+
+if(sayi1%sayac==0 && sayi2%sayac==0)
+  {
+    sonuc = sayac;
+    break;
+  }
+  sayac--;
+  
+}
+
+System.out.println("sayilarin ebobu= " + sonuc);

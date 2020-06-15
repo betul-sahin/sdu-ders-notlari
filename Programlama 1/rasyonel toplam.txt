@@ -1,0 +1,32 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    //x=1/2 + 2/3 +3/4 + .... + n-1/n;
+    int N = 10;
+    float X = 0;
+    float araDegisken = 0;
+    
+    for(float i=1; i<N; i++){
+      araDegisken = i/(i+1);
+      X += araDegisken;
+      System.out.print(i+"/"+(i+1)+"  ");
+      araDegisken = 0;
+    }
+    
+    System.out.println();
+    System.out.println("X = "+X);
+  }
+  
+}

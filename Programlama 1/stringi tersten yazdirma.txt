@@ -1,0 +1,29 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+ 
+  public static void main(String[] args)
+  {
+      System.out.println(TersCevir("Süleyman Demirel Üniversitesi"));
+  }
+  
+  public static String TersCevir(String mesaj){
+      String sonuc = "";
+      
+      for(int i=mesaj.length()-1; i>=0; i--){
+          sonuc += mesaj.charAt(i);
+      }
+      
+      return sonuc;
+  }
+  
+  
+}

@@ -1,0 +1,38 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    char[] harfler = {'a','b','c'};
+    char[] dizi1 = dizi(harfler);
+    
+    System.out.println();
+    
+    int[] sayilar = {12,23,45};
+    int[] dizi2 = dizi(sayilar);
+  }
+  
+  public static char[] dizi(char[] harf){
+    for(int i=0; i<harf.length; i++)
+      System.out.print(harf[i]-'a');
+    
+    return harf;
+  }
+  
+  public static int[] dizi(int[] harf){
+    for(int i=0; i<harf.length; i++)
+      System.out.print(harf[i]-'a');
+    
+    return harf;
+  }
+  
+}

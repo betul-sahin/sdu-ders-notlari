@@ -1,0 +1,41 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+ 
+  public static void main(String[] args)
+  {
+    Scanner scan = new Scanner(System.in);
+    File dosya = new File("dosya.txt");
+    FileReader reader = new FileReader(dosya);
+    BufferedReader br = new BufferedReader(reader);
+    
+    String satir = br.readLine();
+    String gecici = "";
+    while(satir != null){
+        gecici += satir + " ";
+        satir = br.readLine();
+    }
+    
+    System.out.println("Aradığınız kelimeyi giriniz..");
+    String arananKelime = scan.next();
+    
+    String[] kelimeler = gecici.split(" ");
+    int sayac=0;
+    for(int i=0; i<kelimeler.length; i++){
+        if(kelimeler[i].contains(arananKelime)){
+            sayac++;
+        }
+    }
+    
+    System.out.println("Aradığınız kelime "+sayac+" kere dosyada geçmektedir.");
+  }
+  
+}

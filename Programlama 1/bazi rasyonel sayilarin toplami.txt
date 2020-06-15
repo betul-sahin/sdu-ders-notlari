@@ -1,0 +1,25 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    double x;
+    double toplam = 0;
+    for(int i=1; i<=5; i++){
+      x = i/(6-i);
+      toplam += x;
+    }
+    
+    System.out.println(toplam);
+  }
+  
+}

@@ -1,0 +1,37 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Arrays;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String[] dizi1={"10","20","30","a","b","c"};
+    String[] dizi2={"40","50","60","x","y","z"};
+    int uzunluk;
+    
+    //ikiside aynı uzunlukta olmalı
+    //birinci 0 hangi elemandan kopyalamya başlayacağı 
+    //ikinci 0 hangi elemandan yazmaya başlayacağını belirler.
+    //dizi.length ise kaç eleman kopyalamak istediğimizi belirler.
+    
+    /*uzunluk = dizi1.length;
+    System.arraycopy(dizi1,0,dizi2,0,uzunluk);//kaynaktan hedefe kopyalanır.
+    yazdir(dizi2);*/
+    
+    System.out.println();
+    
+    uzunluk = 2;
+    System.arraycopy(dizi1,0,dizi2,4,uzunluk);//2 eleman kopyalanır.
+    yazdir(dizi2);
+  }
+  
+  public static void yazdir(String[] dizi){
+      for(String s:dizi)
+        System.out.print(s+" ");
+  }
+}

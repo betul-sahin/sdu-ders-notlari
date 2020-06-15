@@ -1,0 +1,31 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+ 
+  public static void main(String[] args)
+  {
+      int sayi, bolenSayisi = 0;
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Sayıyı giriniz");
+      sayi = scan.nextInt();
+      
+      for(int i=1; i<=sayi; i++){
+          if(sayi%i==0) bolenSayisi++;
+          if(bolenSayisi == 3) break;
+      }
+      
+      if(bolenSayisi==2)//1 ve kendisine bölünüyor
+        System.out.println("asal");
+      else
+        System.out.println("asal değil");
+  }
+  
+}

@@ -1,0 +1,27 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int[] dizi = {15,25,35,45,23,99};
+    int gecici, rastgeleIndis;
+    
+    for(int i=0; i<dizi.length; i++){
+        rastgeleIndis = (int)Math.random()*dizi.length;
+        gecici = dizi[i];
+        dizi[i] = dizi[rastgeleIndis];
+        dizi[rastgeleIndis] = gecici;
+    }
+    
+    for(int i=0; i<dizi.length; i++)
+        System.out.print(dizi[i] + " ");
+  }
+  
+}

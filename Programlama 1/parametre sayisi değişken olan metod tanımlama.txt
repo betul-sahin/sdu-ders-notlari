@@ -1,0 +1,41 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    BuyuguBul(1);
+    BuyuguBul(12,34,21,45,67,8,9);
+    BuyuguBul(1,12,2,56,789);
+    
+  }
+  
+  public static int BuyuguBul(int ...x){
+    
+    if(x.length == 0)
+      System.out.println("parametresi yok");
+      
+      int eb = 0;
+      eb = x[0];
+      
+    for(int i=0; i<x.length; i++){
+      if(eb < x[i])
+        eb = x[i];
+    }
+      
+    System.out.println("En büyük sayi: " + eb);
+    
+    return eb;
+    
+  }
+  
+}

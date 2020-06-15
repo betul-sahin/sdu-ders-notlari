@@ -1,0 +1,28 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Arrays;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    System.out.println(kacTaneSesliBul("Merhaba Dünya!"));
+  }
+  
+  public static int kacTaneSesliBul(String dizi){
+      String sesli="aeoöuüıi";
+      if(dizi.length()==0)
+        return 0;
+      else{
+          int var=0;
+          if(sesli.contains(dizi.substring(0,1)))
+            var=1;
+            
+          return var + kacTaneSesliBul(dizi.substring(1));
+      }
+  }
+}

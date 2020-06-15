@@ -1,0 +1,19 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    char[] kelime = {'b','i','r','k','e','l','i','m','e'};
+    for(char c:kelime){
+        System.out.print(c+" ");
+    }
+  }
+}

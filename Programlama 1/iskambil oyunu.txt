@@ -1,0 +1,42 @@
+﻿//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int[] kart = new int[52];
+    //0-12 pik, 13-25 kupa, 26-38 karo, 39-51 sinek
+    String[] gruplar = {"sinek","karo","kupa","pik"};
+    String[] rakamlar = {"ace","2","3","4","5","6","7","8","9","10","jack","kralice","kral"};
+    
+    for(int i=0; i<kart.length; i++)
+      kart[i] = i;
+    
+    for(int i=0; i<kart.length; i++){//kartlar karıştırılıyor
+      int sayi = (int)(Math.random()*kart.length);
+      int temp = kart[i];
+      kart[i] = kart[sayi];
+      kart[sayi] = temp;
+    }
+    
+    //ilk 4 kart ekrana yazdırılıyor
+    for(int i=0; i<4; i++){
+      String grup = gruplar[kart[i]/13];
+      String rakam = rakamlar[kart[i]%13];
+      System.out.println("Kart numarası: "+kart[i]+" "+rakam+" "+grup);
+    }
+    
+  }
+  
+ 
+  
+}

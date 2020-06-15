@@ -1,0 +1,36 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int birinciSayi = 80;
+    int ikinciSayi = 55;
+    
+    int sayac = 0;
+    if(birinciSayi<ikinciSayi) sayac = birinciSayi;
+    else sayac = ikinciSayi;
+    
+    int sonuc=0;
+    while(true){
+      if(birinciSayi%sayac==0 && ikinciSayi%sayac==0){
+        sonuc = sayac;
+        break;
+      }
+      sayac--;
+    }
+    
+    System.out.println(birinciSayi+" sayısı ile "+ikinciSayi+" sayısının ebobu = "+sonuc);
+    
+  }
+  
+}

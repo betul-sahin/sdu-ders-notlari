@@ -1,0 +1,35 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// Klavyede girilen sayıya kadar olan asal sayıları bulma
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int N = 100;
+    boolean asalMi;
+    
+    for(int i=2; i<=N; i++){
+      
+      asalMi = true;
+      for(int j=2; j<i; j++){ //2,3,4..i
+        if(i%j==0){
+          asalMi = false;
+          break;
+        }
+      }
+      
+      if(asalMi)
+      System.out.print(i +" ");
+      
+    }
+  }
+  
+}

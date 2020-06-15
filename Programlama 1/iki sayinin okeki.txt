@@ -1,0 +1,22 @@
+Scanner scn = new Scanner(System.in);
+
+System.out.println("1. sayiyi giriniz..");
+int sayi1 = scn.nextInt();
+
+System.out.println("2. sayiyi giriniz..");
+int sayi2 = scn.nextInt();
+
+int sayac=1;
+int sonuc;
+while(true)
+{
+  if(sayac%sayi1==0 && sayac%sayi2==0)
+  {
+    sonuc=sayac;
+    break;
+  }
+  sayac++;
+
+}
+
+System.out.println("sonuc= " + sonuc);

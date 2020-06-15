@@ -1,0 +1,27 @@
+﻿//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    Random random = new Random();
+    int secenek = random.nextInt(2);
+    if(secenek == 1){//küçük harf
+      char c = (char)('a'+Math.random()*('z'-'a'));
+      System.out.println(c);
+    }
+    else{
+      char c = (char)('A'+Math.random()*('Z'-'A'));
+      System.out.println(c);
+    }
+    
+  }
+}

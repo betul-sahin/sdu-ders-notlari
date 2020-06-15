@@ -1,0 +1,29 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int faktoriyeli = Faktoriyel(5);
+    System.out.println("5 sayısının faktöriyeli: " + faktoriyeli);
+  }
+  
+  public static int Faktoriyel(int sayi){
+    int sonuc=1;
+    for(int i=1; i<=sayi; i++){
+      sonuc = sonuc*i;
+    }
+    
+    return sonuc;
+  }
+  
+}

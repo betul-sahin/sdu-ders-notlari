@@ -1,0 +1,29 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HelloWorld
+{
+ 
+  public static void main(String[] args)
+  {
+    
+    int sayi = 151;//1331, 14541
+    int palindrom = 0;
+    int temp = sayi;
+    
+    while(sayi!=0){
+      palindrom = sayi%10 + palindrom*10;
+      sayi = sayi/10;
+    }
+    
+    System.out.println((temp==palindrom)?"sayi palindromdur.":"sayi palindrom değildir.");
+    
+  }
+  
+}

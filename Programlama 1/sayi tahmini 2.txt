@@ -1,0 +1,35 @@
+//*******************************************************************
+// SDÜ Bilgisayar Mühendisliği Programlama 1 (Java)
+// 
+// 
+//*******************************************************************
+
+import java.util.Random;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Random random = new Random();
+    Scanner scan = new Scanner(System.in);
+    
+    int rastgeleSayi = random.nextInt(100);
+    int sayi;
+    
+    while(true){
+        System.out.println("Tahmin: ");
+        sayi = scan.nextInt();
+        if(sayi>rastgeleSayi){
+            System.out.println("Daha küçük bir sayı giriniz.");
+        }else if(sayi<rastgeleSayi){
+            System.out.println("Daha büyük bir sayı giriniz.");
+        }else if(sayi==rastgeleSayi){
+            System.out.println("Bildiniz!");
+            break;
+        }
+    }
+  }
+  
+}
